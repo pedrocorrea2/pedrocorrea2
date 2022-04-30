@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @pedrocorrea2
 - 👀 I’m interested in Automation and Artificial Intelligence
-- 🌱 I’m currently learning Google Scripts
+- 🌱 I’m currently learning Google App Script
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
