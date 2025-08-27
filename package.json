@@ -7,8 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+ codex/create-new-website-for-factoring-service-2uhkwe
     "test": "echo \"No tests\"",
     "deploy": "next build && rm -rf docs && mv out docs && touch docs/.nojekyll"
+ main
   },
   "keywords": [],
   "author": "",
