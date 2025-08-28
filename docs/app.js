@@ -25,3 +25,9 @@ document.getElementById('jobForm').addEventListener('submit', function (e) {
   alert('Gracias por tu interés. Revisaremos tu información.');
   this.reset();
 });
+
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Acceso de clientes próximamente disponible.');
+  this.reset();
+});

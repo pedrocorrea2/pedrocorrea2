@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ACF Capital - Factoring</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header class="navbar">
@@ -15,7 +16,7 @@
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#simulador">Simulador</a>
         <a href="#contacto">Contacto</a>
-        <button class="btn-accent">Acceso Clientes</button>
+        <a href="#login" class="btn-accent"><i class="fa-solid fa-right-to-bracket"></i> Ingreso</a>
         <button class="btn-accent">Firma Documentos</button>
       </nav>
     </div>
@@ -34,14 +35,17 @@
       <h2>Nuestros servicios</h2>
       <div class="cards">
         <div class="card">
+          <i class="fa-solid fa-file-invoice-dollar icon"></i>
           <h3>Factoring tradicional</h3>
           <p>Financia tus facturas de forma ágil y segura.</p>
         </div>
         <div class="card">
+          <i class="fa-solid fa-eye-slash icon"></i>
           <h3>Factoring sin notificación</h3>
           <p>Obtén liquidez sin afectar la relación con tu cliente.</p>
         </div>
         <div class="card">
+          <i class="fa-solid fa-handshake icon"></i>
           <h3>Gestión de cobranza</h3>
           <p>Delegamos la cobranza para que te concentres en crecer.</p>
         </div>
@@ -54,14 +58,17 @@
       <h2>¿Cómo funciona?</h2>
       <div class="how-grid">
         <div>
+          <i class="fa-solid fa-upload icon"></i>
           <h3>1. Sube tu factura</h3>
           <p>Envíanos la documentación mediante nuestro portal.</p>
         </div>
         <div>
+          <i class="fa-solid fa-check-circle icon"></i>
           <h3>2. Evaluamos y aprobamos</h3>
           <p>Recibes respuesta en menos de 24 horas.</p>
         </div>
         <div>
+          <i class="fa-solid fa-money-bill-wave icon"></i>
           <h3>3. Recibe tu dinero</h3>
           <p>Transferimos los fondos a tu cuenta bancaria.</p>
         </div>
@@ -88,6 +95,21 @@
         <p>Descuento: <span id="discount"></span></p>
         <p>Monto a recibir: <span id="net"></span></p>
       </div>
+    </div>
+  </section>
+
+  <section id="login" class="login">
+    <div class="container">
+      <h2>Acceso Clientes</h2>
+      <form id="loginForm" class="login-form">
+        <label>Usuario
+          <input type="text" id="loginUser" required />
+        </label>
+        <label>Contraseña
+          <input type="password" id="loginPass" required />
+        </label>
+        <button type="submit" class="btn-primary">Ingresar</button>
+      </form>
     </div>
   </section>
 
