@@ -11,6 +11,7 @@ const sumFee = document.getElementById('sumFee');
 const sumNet = document.getElementById('sumNet');
 
 let days = 30;
+
 const fee = 50000;
 
 const format = (n) =>
@@ -107,8 +108,10 @@ loginUser.addEventListener('input', (e) => {
   e.target.value = v;
 });
 
-document.getElementById('btnRegister').addEventListener('click', () => {
-  alert('Registro próximamente disponible.');
+
+document.getElementById('btnFirmaDocsTop').addEventListener('click', () => {
+  alert('Firma de documentos próximamente disponible.');
+
 });
 
 // Gallery slideshow

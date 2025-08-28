@@ -47,11 +47,17 @@ export default function Navbar() {
           <Link href="#como-funciona">Cómo funciona</Link>
           <Link href="#oficinas">Oficinas</Link>
           <Link href="#contacto">Contacto</Link>
-          <button className="btn-secondary" onClick={() => alert('Registro próximamente disponible.')}>Registrarse</button>
+          <button
+            className="btn-secondary btn-nav"
+            onClick={handleFirma}
+          >
+            Firmar documentos
+          </button>
           <div className="login-dropdown" ref={menuRef}>
             <button
               id="loginToggle"
-              className="btn-accent"
+              className="btn-accent btn-nav"
+
               onClick={() => setOpen(!open)}
             >
               Acceso clientes
@@ -60,6 +66,7 @@ export default function Navbar() {
               <div className="dropdown-menu">
                 <form onSubmit={handleLogin} className="login-form">
                   <h3>Bienvenido a Acf Capital</h3>
+
                   <input
                     id="loginUser"
                     name="usuario"
