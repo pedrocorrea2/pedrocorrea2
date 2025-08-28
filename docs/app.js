@@ -20,16 +20,27 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   this.reset();
 });
 
-const loginModal = document.getElementById('loginModal');
-document.getElementById('btnPortalClientes').addEventListener('click', () => {
-  loginModal.classList.remove('hidden');
+const loginToggle = document.getElementById('loginToggle');
+const loginMenu = document.getElementById('loginMenu');
+
+loginToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  loginMenu.classList.toggle('hidden');
 });
-document.getElementById('closeLogin').addEventListener('click', () => {
-  loginModal.classList.add('hidden');
+
+document.addEventListener('click', (e) => {
+  if (!loginMenu.contains(e.target) && e.target !== loginToggle) {
+    loginMenu.classList.add('hidden');
+  }
 });
+
 document.getElementById('loginForm').addEventListener('submit', function (e) {
   e.preventDefault();
   alert('Acceso de clientes próximamente disponible.');
   this.reset();
-  loginModal.classList.add('hidden');
+  loginMenu.classList.add('hidden');
+});
+
+document.getElementById('btnFirmaDocs').addEventListener('click', () => {
+  alert('Firma de documentos próximamente disponible.');
 });
