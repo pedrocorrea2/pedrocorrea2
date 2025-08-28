@@ -110,25 +110,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      {open && (
-        <div className="login-modal" role="dialog" aria-modal="true">
-          <div className="login-box">
-            <button className="close" onClick={handleClose} aria-label="Cerrar">
-              &times;
-            </button>
-            <h2>Bienvenido a ACF Capital</h2>
-            <form onSubmit={handleLogin} className="login-form">
-              <label htmlFor="loginUser">Usuario</label>
-              <input id="loginUser" name="usuario" required />
-              <label htmlFor="loginPass">Contraseña</label>
-              <input id="loginPass" name="password" type="password" required />
-              <button type="submit" className="btn-primary">
-                Ingresar
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
