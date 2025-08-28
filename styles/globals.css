@@ -98,6 +98,14 @@ nav .links a {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
 }
+.service-card svg,
+.how-grid svg,
+.contact-header svg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+}
 .how-it-works {
   background: #f5f5f5;
   padding: 3rem 1rem;
@@ -110,6 +118,14 @@ nav .links a {
 }
 .contact {
   padding: 3rem 1rem;
+}
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact-header p {
+  margin-top: 0.5rem;
+  color: #555;
 }
 form label {
   display: block;
@@ -129,4 +145,24 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+
+.work {
+  padding: 3rem 1rem;
+}
+.work-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.work-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
