@@ -19,8 +19,9 @@
         <a href="#simulador">Simulador</a>
         <a href="#oficinas">Oficinas</a>
         <a href="#contacto">Contacto</a>
+        <button id="btnRegister" class="btn-secondary">Registrarse</button>
         <div class="login-dropdown">
-          <button id="loginToggle" class="btn-accent"><i class="fa-solid fa-user"></i> Ingreso</button>
+          <button id="loginToggle" class="btn-accent"><i class="fa-solid fa-user"></i> Acceso clientes</button>
           <div id="loginMenu" class="dropdown-menu hidden">
             <form id="loginForm" class="login-form">
               <h3>Bienvenido a Office Banking</h3>
@@ -158,7 +159,7 @@
           <label for="invoiceAmount">Monto de la(s) factura(s) que quieres adelantar</label>
           <div class="amount-input">
             <span class="currency">CLP $</span>
-            <input type="number" id="invoiceAmount" value="1000000" />
+            <input type="text" id="invoiceAmount" value="1.000.000" inputmode="numeric" />
           </div>
           <div class="preset-amounts">
             <button type="button" data-value="50000">50K</button>
@@ -174,13 +175,14 @@
             <button type="button" data-days="120">120 días</button>
             <button type="button" data-days="150">150 días</button>
           </div>
-          <label for="rate">Tasa de interés mensual: <span id="rateValue">1.0%</span></label>
-          <input type="range" id="rate" min="0" max="5" step="0.1" value="1" />
+          <label for="rate">Tasa de interés mensual: <span id="rateValue">0.9%</span></label>
+          <input type="range" id="rate" min="0" max="5" step="0.1" value="0.9" />
         </form>
         <div class="calc-summary">
           <p>Monto facturas por financiar <span id="sumAmount"></span></p>
           <p>Monto financiado (100%) <span id="sumFinanced"></span></p>
           <p>Comisión de factoring <span id="sumDiscount"></span></p>
+          <p>Gastos de la operación <span id="sumFee"></span></p>
           <p class="result">Hoy puedes cobrar <span id="sumNet"></span></p>
           <button class="btn-accent">Regístrate y aumenta tu liquidez</button>
         </div>
