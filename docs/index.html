@@ -1,3 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACF Capital - Factoring</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <img src="logo_acf.svg" alt="ACF Capital" class="logo" />
+      <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#oficinas">Oficinas</a>
+        <a href="#contacto">Contacto</a>
+        <button id="btnFirmaDocsTop" class="btn-secondary btn-nav">Firmar documentos</button>
+        <div class="login-dropdown">
+          <button id="loginToggle" class="btn-accent btn-nav"><i class="fa-solid fa-user"></i> Acceso clientes</button>
+          <div id="loginMenu" class="dropdown-menu hidden">
+            <form id="loginForm" class="login-form">
+              <h3>Bienvenido a Office Banking</h3>
+              <input type="text" id="loginUser" placeholder="RUT" required />
+              <input type="password" id="loginPass" placeholder="Contraseña" required />
+              <button type="submit" class="btn-login">Aceptar</button>
+              <a href="#" class="forgot-link">¿Olvidaste tu clave?</a>
+            </form>
+            <button id="btnFirmaDocs" class="btn-link">Firma Documentos</button>
+          </div>
+        </div>
+        </nav>
+      </div>
+    </header>
 
-<!DOCTYPE html><html><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width" data-next-head=""/><link rel="preload" href="/pedrocorrea2/_next/static/css/58e45232a4595d4a.css" as="style"/><link rel="stylesheet" href="/pedrocorrea2/_next/static/css/58e45232a4595d4a.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" noModule="" src="/pedrocorrea2/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><script src="/pedrocorrea2/_next/static/chunks/webpack-ecdec4860233b573.js" defer=""></script><script src="/pedrocorrea2/_next/static/chunks/framework-b1e5f14688f9ffe6.js" defer=""></script><script src="/pedrocorrea2/_next/static/chunks/main-d16d500bfe389438.js" defer=""></script><script src="/pedrocorrea2/_next/static/chunks/pages/_app-81242606e8bf25ad.js" defer=""></script><script src="/pedrocorrea2/_next/static/chunks/92-d6276f4dbf7b094a.js" defer=""></script><script src="/pedrocorrea2/_next/static/chunks/pages/index-89ac7a27375d6cd2.js" defer=""></script><script src="/pedrocorrea2/_next/static/WVJM7Ksdh9dTFjaRvFHtZ/_buildManifest.js" defer=""></script><script src="/pedrocorrea2/_next/static/WVJM7Ksdh9dTFjaRvFHtZ/_ssgManifest.js" defer=""></script></head><body><div id="__next"><header><nav class="container"><a href="/pedrocorrea2"><img alt="ACF Capital" loading="lazy" width="160" height="48" decoding="async" data-nimg="1" style="color:transparent" src="/logo_acf.svg"/></a><div class="links"><a href="/pedrocorrea2#servicios">Servicios</a><a href="/pedrocorrea2#como-funciona">Cómo funciona</a><a href="/pedrocorrea2#contacto">Contacto</a><button id="btnPortalClientes" class="btn-accent">Acceso Clientes</button><button id="btnFirmaDocs" class="btn-accent">Firma Documentos</button></div></nav></header><section class="hero"><div class="container"><h1>Liquidez inmediata para tu empresa</h1><p>Anticipa el pago de tus facturas con tasas competitivas.</p><a href="#contacto" class="btn-accent">Solicitar Factoring</a></div></section><section id="servicios" class="services"><div class="container"><h2>Nuestros servicios</h2><div class="services-grid"><div class="service-card"><h3>Factoring tradicional</h3><p>Anticipa el pago de tus facturas con un proceso rápido y confiable.</p></div><div class="service-card"><h3>Factoring sin notificación</h3><p>Obtén liquidez sin notificar a tu cliente, manteniendo la relación comercial.</p></div><div class="service-card"><h3>Gestión de cobranza</h3><p>Nos encargamos de la cobranza para que te enfoques en hacer crecer tu empresa.</p></div></div></div></section><section id="como-funciona" class="how-it-works"><div class="container"><h2>¿Cómo funciona?</h2><div class="how-grid"><div><h3>1. Sube tu factura</h3><p>Envías la documentación a través del portal.</p></div><div><h3>2. Evaluamos y aprobamos</h3><p>Recibes respuesta en menos de 24 horas.</p></div><div><h3>3. Recibe tu dinero</h3><p>Transferimos los fondos a tu cuenta bancaria.</p></div></div></div></section><section id="trabaja" class="contact"><div class="container"><h2>Trabaja con nosotros</h2><form id="formTrabaja"><label for="nombreTrabajo">Nombre</label><input id="nombreTrabajo" required="" name="nombre"/><label for="correoTrabajo">Correo</label><input id="correoTrabajo" type="email" required="" name="correo"/><label for="mensajeTrabajo">Mensaje</label><textarea id="mensajeTrabajo" name="mensaje" rows="4"></textarea><button type="submit" class="btn-primary">Enviar</button></form></div></section><section id="contacto" class="contact"><div class="container"><h2>Contáctanos</h2><form id="formNuevoCliente"><label for="nombre">Nombre</label><input id="nombre" required="" name="nombre"/><label for="correo">Correo</label><input id="correo" type="email" required="" name="correo"/><label for="empresa">Razón social</label><input id="empresa" required="" name="empresa"/><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="4"></textarea><button type="submit" class="btn-primary">Enviar</button></form></div></section><footer>© <!-- -->2025<!-- --> ACF Capital</footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"WVJM7Ksdh9dTFjaRvFHtZ","assetPrefix":"/pedrocorrea2","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Liquidez inmediata para tu empresa</h1>
+        <p>Anticipa tus facturas con tasas competitivas y un proceso simple.</p>
+        <a href="#simulador" class="btn-primary">Simular Factoring</a>
+      </div>
+      <div class="hero-image">
+        <div class="gallery">
+          <img src="https://www.acfcapital.cl/acfcapital/images/fondo_preguntas_frec.jpg?crc=53158438" alt="Preguntas frecuentes" class="active" />
+          <img src="https://www.acfcapital.cl/acfcapital/images/fondo_c.jpg?crc=404174028" alt="Fondo corporativo C" />
+          <img src="https://www.acfcapital.cl/acfcapital/images/fondo_b.jpg?crc=4148428054" alt="Fondo corporativo B" />
+          <img src="https://www.acfcapital.cl/acfcapital/images/fondo_a.jpg?crc=3944499221" alt="Fondo corporativo A" />
+        </div>
+      </div>
+    </div>
+    </section>
 
+    <section id="nosotros" class="stats reveal">
+      <div class="container">
+        <h2>Nosotros</h2>
+        <div class="stats-grid">
+          <div class="stats-card">
+            <p class="stat-value">+500</p>
+            <p class="stat-label">Clientes activos</p>
+          </div>
+          <div class="stats-card">
+            <p class="stat-value">US$7B</p>
+            <p class="stat-label">Financiamiento cursado</p>
+          </div>
+          <div class="stats-card">
+            <p class="stat-value">24h</p>
+            <p class="stat-label">Respuesta promedio</p>
+          </div>
+          <div class="stats-card">
+            <p class="stat-value">15+</p>
+            <p class="stat-label">Años de experiencia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="services reveal">
+    <div class="container">
+      <h2>Nuestros servicios</h2>
+      <div class="cards">
+        <div class="card">
+          <i class="fa-solid fa-coins icon"></i>
+          <h3>Anticipo de fondos</h3>
+          <p>Compramos tus cuentas por cobrar y te entregamos efectivo al contado.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-hand-holding-dollar icon"></i>
+          <h3>Cobranza</h3>
+          <p>Gestionamos tus documentos con profesionales y tecnología de punta.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-globe icon"></i>
+          <h3>Información en línea</h3>
+          <p>Accede a la actualización de tus operaciones en nuestro sitio web.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-eye-slash icon"></i>
+          <h3>Factoring sin notificación</h3>
+          <p>Obtén liquidez sin afectar la relación con tu cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="como-funciona" class="how-it-works reveal">
+    <div class="container">
+      <h2>¿Cómo funciona?</h2>
+      <div class="how-grid">
+        <div>
+          <i class="fa-solid fa-upload icon"></i>
+          <h3>1. Sube tu factura</h3>
+          <p>Envíanos la documentación mediante nuestro portal.</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-check-circle icon"></i>
+          <h3>2. Evaluamos y aprobamos</h3>
+          <p>Recibes respuesta en menos de 24 horas.</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-money-bill-wave icon"></i>
+          <h3>3. Recibe tu dinero</h3>
+          <p>Transferimos los fondos a tu cuenta bancaria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="calculator reveal" id="simulador">
+    <div class="container">
+      <p class="tagline">Cobra hoy tus facturas con factoring</p>
+      <h2>Simula tu primer financiamiento</h2>
+      <div class="calc-wrapper">
+        <form id="calcForm" class="calc-form">
+          <label for="invoiceAmount">Monto de la(s) factura(s) que quieres adelantar</label>
+          <div class="amount-input">
+            <span class="currency">CLP $</span>
+            <input type="text" id="invoiceAmount" value="1.000.000" inputmode="numeric" />
+          </div>
+          <div class="preset-amounts">
+            <button type="button" data-value="50000">50K</button>
+            <button type="button" data-value="500000">500K</button>
+            <button type="button" data-value="1000000">1M</button>
+            <button type="button" data-value="5000000">5M</button>
+          </div>
+          <p>Plazo de pago de la factura</p>
+          <div class="term-buttons">
+            <button type="button" data-days="30" class="active">30 días</button>
+            <button type="button" data-days="60">60 días</button>
+            <button type="button" data-days="90">90 días</button>
+            <button type="button" data-days="120">120 días</button>
+            <button type="button" data-days="150">150 días</button>
+          </div>
+          <label for="rate">Tasa de interés mensual: <span id="rateValue">0.9%</span></label>
+          <input type="range" id="rate" min="0" max="5" step="0.1" value="0.9" />
+        </form>
+        <div class="calc-summary">
+          <p>Monto facturas por financiar <span id="sumAmount"></span></p>
+          <p>Monto financiado (100%) <span id="sumFinanced"></span></p>
+          <p>Comisión de factoring <span id="sumDiscount"></span></p>
+          <p>Gastos de la operación <span id="sumFee"></span></p>
+          <p class="result">Hoy puedes cobrar <span id="sumNet"></span></p>
+          <button class="btn-accent">Regístrate y aumenta tu liquidez</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="oficinas" class="offices reveal">
+    <div class="container">
+      <h2>Nuestras Oficinas</h2>
+      <div class="offices-grid">
+        <div>
+          <p><strong>Antofagasta</strong><br />Arturo Prat 461 Of. 1802<br />55 2251 340</p>
+          <p><strong>Copiapó</strong><br />clezcano@acfcapital.cl<br />2 23389400</p>
+          <p><strong>Santiago, Casa Matriz</strong><br />Av. El Bosque Norte 0177 Of. 802<br />Las Condes<br />22338 9400</p>
+          <p><strong>Santiago, Providencia</strong><br />Av. Providencia 2653 Of. 1102<br />Providencia<br />22520 6000 - 22233 2469</p>
+        </div>
+        <div>
+          <p><strong>Viña del Mar</strong><br />Av. Nueva libertad 1405 Of.1306<br />32 2690 759</p>
+          <p><strong>Rancagua</strong><br />eguajardo@acfcapital.cl<br />2 23389400</p>
+          <p><strong>Puerto Montt</strong><br />Benavente 550 Of. 503<br />65 2348 910</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact reveal">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      <p class="address">Av. El Bosque Norte 0177 Of. 802, Las Condes, Santiago.</p>
+      <form id="contactForm" class="contact-form">
+        <label>Nombre
+          <input type="text" id="name" required />
+        </label>
+        <label>Correo
+          <input type="email" id="email" required />
+        </label>
+        <label>Mensaje
+          <textarea id="message" rows="4"></textarea>
+        </label>
+      <button type="submit" class="btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 ACF Capital</p>
+    </div>
+  </footer>
+
+  <a
+    href="https://api.whatsapp.com/send?phone=56985963134&text=Hola!%20Quiero%20hacer%20una%20consulta."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
