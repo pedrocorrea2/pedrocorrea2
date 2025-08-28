@@ -91,14 +91,19 @@ const loginClose = document.getElementById('loginClose');
 
 loginToggle.addEventListener('click', () => {
   loginModal.classList.remove('hidden');
+  loginModal.removeAttribute('hidden');
 });
 
 loginClose.addEventListener('click', () => {
   loginModal.classList.add('hidden');
+  loginModal.setAttribute('hidden', '');
 });
 
 loginModal.addEventListener('click', (e) => {
-  if (e.target === loginModal) loginModal.classList.add('hidden');
+  if (e.target === loginModal) {
+    loginModal.classList.add('hidden');
+    loginModal.setAttribute('hidden', '');
+  }
 
 });
 
@@ -107,6 +112,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   alert('Acceso de clientes próximamente disponible.');
   this.reset();
   loginModal.classList.add('hidden');
+  loginModal.setAttribute('hidden', '');
 });
 
 document.getElementById('btnFirmaDocsTop').addEventListener('click', () => {
