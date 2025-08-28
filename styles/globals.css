@@ -208,3 +208,26 @@ footer {
 .stat-label {
   margin-top: 0.5rem;
 }
+
+/* Factoring Calculator */
+.calculator {
+  background: #f5f5f5;
+  padding: 3rem 1rem;
+}
+.calculator-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--color-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.calculator-result {
+  max-width: 600px;
+  margin: 1.5rem auto 0 auto;
+  background: var(--color-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
