@@ -20,14 +20,16 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   this.reset();
 });
 
-document.getElementById('jobForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  alert('Gracias por tu interés. Revisaremos tu información.');
-  this.reset();
+const loginModal = document.getElementById('loginModal');
+document.getElementById('btnPortalClientes').addEventListener('click', () => {
+  loginModal.classList.remove('hidden');
 });
-
+document.getElementById('closeLogin').addEventListener('click', () => {
+  loginModal.classList.add('hidden');
+});
 document.getElementById('loginForm').addEventListener('submit', function (e) {
   e.preventDefault();
   alert('Acceso de clientes próximamente disponible.');
   this.reset();
+  loginModal.classList.add('hidden');
 });

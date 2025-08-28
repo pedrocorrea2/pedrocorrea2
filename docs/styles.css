@@ -189,61 +189,94 @@ body {
 }
 
 /* Simulator */
-.simulator {
+.calculator {
   padding: 3rem 0;
 }
-.simulator h2 {
+.calculator h2 {
   text-align: center;
   margin-bottom: 1.5rem;
 }
-.calc-form {
+.calculator-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.calc-grid {
   display: grid;
   gap: 1rem;
-  max-width: 400px;
-  margin: 0 auto 1.5rem;
 }
-.calc-form label {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
+@media (min-width: 600px) {
+  .calc-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .calc-grid label:nth-of-type(3),
+  .calc-grid button {
+    grid-column:1/ span 2;
+  }
 }
-.calc-form input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.calc-grid label {
+  display:flex;
+  flex-direction:column;
+  font-size:0.9rem;
 }
-.result {
-  text-align: center;
-  font-weight: 600;
+.calc-grid input {
+  padding:0.5rem;
+  border:1px solid #ccc;
+  border-radius:4px;
 }
-.hidden {
-  display: none;
+.calc-output {
+  margin-top:1rem;
+  text-align:center;
+  font-weight:600;
 }
+.hidden{display:none;}
 
-/* Login */
-.login {
-  padding: 3rem 0;
-  background: #fff;
+/* Login modal */
+.modal {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:100;
 }
-.login h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.modal-content {
+  background:#fff;
+  padding:2rem;
+  border-radius:8px;
+  width:100%;
+  max-width:400px;
+  position:relative;
+}
+.modal-content .close {
+  position:absolute;
+  top:0.5rem;
+  right:0.5rem;
+  background:none;
+  border:none;
+  font-size:1.5rem;
 }
 .login-form {
-  display: grid;
-  gap: 1rem;
-  max-width: 400px;
-  margin: 0 auto;
+  display:grid;
+  gap:1rem;
+  margin-top:1rem;
 }
 .login-form label {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
+  display:flex;
+  flex-direction:column;
+  font-size:0.9rem;
 }
 .login-form input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding:0.5rem;
+  border:1px solid #ccc;
+  border-radius:4px;
 }
 
 /* Contact */

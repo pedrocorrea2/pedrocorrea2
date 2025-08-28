@@ -17,8 +17,8 @@
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#simulador">Simulador</a>
         <a href="#contacto">Contacto</a>
-        <a href="#login" class="btn-accent"><i class="fa-solid fa-right-to-bracket"></i> Ingreso</a>
-        <button class="btn-accent">Firma Documentos</button>
+        <button id="btnPortalClientes" class="btn-accent"><i class="fa-solid fa-right-to-bracket"></i> Ingreso</button>
+        <button id="btnFirmaDocs" class="btn-accent">Firma Documentos</button>
       </nav>
     </div>
   </header>
@@ -121,58 +121,27 @@
     </div>
   </section>
 
-  <section id="simulador" class="simulator">
+  <section id="simulador" class="calculator">
     <div class="container">
       <h2>Simula tu factoring</h2>
-      <form id="calcForm" class="calc-form">
-        <label>Monto factura
-          <input type="number" id="invoiceAmount" required />
-        </label>
-        <label>Tasa anual (%)
-          <input type="number" id="rate" required />
-        </label>
-        <label>Plazo (días)
-          <input type="number" id="days" required />
-        </label>
-        <button type="submit" class="btn-primary">Calcular</button>
-      </form>
-      <div id="result" class="result hidden">
-        <p>Descuento: <span id="discount"></span></p>
-        <p>Monto a recibir: <span id="net"></span></p>
+      <div class="calculator-card">
+        <form id="calcForm" class="calc-grid">
+          <label>Monto factura
+            <input type="number" id="invoiceAmount" required />
+          </label>
+          <label>Tasa anual (%)
+            <input type="number" id="rate" required />
+          </label>
+          <label>Plazo (días)
+            <input type="number" id="days" required />
+          </label>
+          <button type="submit" class="btn-primary">Calcular</button>
+        </form>
+        <div id="result" class="calc-output hidden">
+          <p>Descuento: <span id="discount"></span></p>
+          <p>Monto a recibir: <span id="net"></span></p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section id="login" class="login">
-    <div class="container">
-      <h2>Acceso Clientes</h2>
-      <form id="loginForm" class="login-form">
-        <label>Usuario
-          <input type="text" id="loginUser" required />
-        </label>
-        <label>Contraseña
-          <input type="password" id="loginPass" required />
-        </label>
-        <button type="submit" class="btn-primary">Ingresar</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="trabaja" class="contact">
-    <div class="container">
-      <h2>Trabaja con nosotros</h2>
-      <form id="jobForm" class="contact-form">
-        <label>Nombre
-          <input type="text" id="jobName" required />
-        </label>
-        <label>Correo
-          <input type="email" id="jobEmail" required />
-        </label>
-        <label>Mensaje
-          <textarea id="jobMessage" rows="4"></textarea>
-        </label>
-        <button type="submit" class="btn-primary">Enviar</button>
-      </form>
     </div>
   </section>
 
@@ -190,7 +159,7 @@
         <label>Mensaje
           <textarea id="message" rows="4"></textarea>
         </label>
-        <button type="submit" class="btn-primary">Enviar</button>
+      <button type="submit" class="btn-primary">Enviar</button>
       </form>
     </div>
   </section>
@@ -201,6 +170,21 @@
     </div>
   </footer>
 
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeLogin" class="close" aria-label="Cerrar">&times;</button>
+      <h2>Acceso Clientes</h2>
+      <form id="loginForm" class="login-form">
+        <label>Usuario
+          <input type="text" id="loginUser" required />
+        </label>
+        <label>Contraseña
+          <input type="password" id="loginPass" required />
+        </label>
+        <button type="submit" class="btn-primary">Ingresar</button>
+      </form>
+    </div>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
