@@ -4,7 +4,7 @@
   --gold: #e9b72d;
   --light: #f5f6fa;
   --dark: #222;
-  --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font: 'Poppins', sans-serif;
 }
 
 * {
@@ -67,9 +67,9 @@ body {
 /* Hero */
 /* Hero */
 .hero {
-  background: #fff;
-  color: var(--dark);
-  padding: 4rem 0;
+  background: var(--blue);
+  color: #fff;
+  padding: 6rem 0;
 }
 .hero-grid {
   display: grid;
@@ -437,4 +437,16 @@ footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
 }
