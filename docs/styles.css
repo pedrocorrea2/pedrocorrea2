@@ -101,6 +101,7 @@ body {
   opacity: 1;
 }
 
+
 /* Buttons */
 .btn-primary {
   background: var(--gold);
@@ -224,6 +225,7 @@ body {
   margin: 0.5rem 0 2rem;
 }
 .calc-wrapper {
+
   background: #fff;
   padding: 2rem;
   border-radius: 8px;
