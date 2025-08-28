@@ -9,6 +9,7 @@ pedrocorrea2/pedrocorrea2 is a ✨ special ✨ repository because its `README.md
 You can click the Preview link to take a look at your changes.
 --->
 
+
 ## Sitio estático de factoring
 
 Este repositorio contiene un prototipo de sitio web para ACF Capital construido con Next.js. Incluye componentes básicos como navegación, sección de héroe, servicios ofrecidos, pasos del proceso, formularios de contacto y "Trabaja con nosotros".
