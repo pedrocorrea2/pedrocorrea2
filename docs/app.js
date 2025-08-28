@@ -11,7 +11,6 @@ const sumFee = document.getElementById('sumFee');
 const sumNet = document.getElementById('sumNet');
 
 let days = 30;
-
 const fee = 50000;
 
 const format = (n) =>
