@@ -71,29 +71,34 @@ if (contactForm) {
   });
 }
 
-// Login dropdown
-const loginToggle = document.getElementById('loginToggle');
-const loginMenu = document.getElementById('loginMenu');
 
-loginToggle.addEventListener('click', (e) => {
-  e.stopPropagation();
-  loginMenu.classList.toggle('hidden');
+// Login modal
+const loginToggle = document.getElementById('loginToggle');
+const loginModal = document.getElementById('loginModal');
+const loginClose = document.getElementById('loginClose');
+
+loginToggle.addEventListener('click', () => {
+  loginModal.classList.remove('hidden');
 });
 
-document.addEventListener('click', (e) => {
-  if (!loginMenu.contains(e.target) && e.target !== loginToggle) {
-    loginMenu.classList.add('hidden');
-  }
+loginClose.addEventListener('click', () => {
+  loginModal.classList.add('hidden');
+});
+
+loginModal.addEventListener('click', (e) => {
+  if (e.target === loginModal) loginModal.classList.add('hidden');
+
 });
 
 document.getElementById('loginForm').addEventListener('submit', function (e) {
   e.preventDefault();
   alert('Acceso de clientes próximamente disponible.');
   this.reset();
-  loginMenu.classList.add('hidden');
+  loginModal.classList.add('hidden');
 });
 
-document.getElementById('btnFirmaDocs').addEventListener('click', () => {
+document.getElementById('btnFirmaDocsTop').addEventListener('click', () => {
+
   alert('Firma de documentos próximamente disponible.');
 });
 
@@ -108,11 +113,6 @@ loginUser.addEventListener('input', (e) => {
   e.target.value = v;
 });
 
-
-document.getElementById('btnFirmaDocsTop').addEventListener('click', () => {
-  alert('Firma de documentos próximamente disponible.');
-
-});
 
 // Gallery slideshow
 const gallerySlides = document.querySelectorAll('.gallery img');

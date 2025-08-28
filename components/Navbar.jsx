@@ -65,7 +65,7 @@ export default function Navbar() {
             {open && (
               <div className="dropdown-menu">
                 <form onSubmit={handleLogin} className="login-form">
-                  <h3>Bienvenido a Acf Capital</h3>
+                  <h3>Bienvenido a Office Banking</h3>
 
                   <input
                     id="loginUser"

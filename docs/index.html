@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://www.acfcapital.cl data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self'; connect-src 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+
   <title>ACF Capital - Factoring</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -20,22 +24,26 @@
         <a href="#oficinas">Oficinas</a>
         <a href="#contacto">Contacto</a>
         <button id="btnFirmaDocsTop" class="btn-secondary btn-nav">Firmar documentos</button>
-        <div class="login-dropdown">
-          <button id="loginToggle" class="btn-accent btn-nav"><i class="fa-solid fa-user"></i> Acceso clientes</button>
-          <div id="loginMenu" class="dropdown-menu hidden">
-            <form id="loginForm" class="login-form">
-              <h3>Bienvenido a Office Banking</h3>
-              <input type="text" id="loginUser" placeholder="RUT" required />
-              <input type="password" id="loginPass" placeholder="Contraseña" required />
-              <button type="submit" class="btn-login">Aceptar</button>
-              <a href="#" class="forgot-link">¿Olvidaste tu clave?</a>
-            </form>
-            <button id="btnFirmaDocs" class="btn-link">Firma Documentos</button>
-          </div>
-        </div>
+        <button id="loginToggle" class="btn-accent btn-nav"><i class="fa-solid fa-user"></i> Acceso clientes</button>
+
         </nav>
       </div>
     </header>
+
+  <div id="loginModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button id="loginClose" class="modal-close" aria-label="Cerrar">&times;</button>
+      <form id="loginForm" class="login-form">
+        <h3>Acceso clientes</h3>
+        <label for="loginUser">RUT</label>
+        <input type="text" id="loginUser" required />
+        <label for="loginPass">Contraseña</label>
+        <input type="password" id="loginPass" required />
+        <button type="submit" class="btn-login">Aceptar</button>
+        <a href="#" class="forgot-link">¿Olvidaste tu clave?</a>
+      </form>
+    </div>
+  </div>
 
   <section class="hero">
     <div class="container hero-grid">
