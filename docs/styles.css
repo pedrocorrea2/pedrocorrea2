@@ -64,6 +64,25 @@ body {
   height: 48px;
 }
 
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .navbar nav a,
+  .navbar nav button {
+    margin: 0.5rem 0 0;
+  }
+  .navbar nav .login-dropdown {
+    margin-left: 0;
+  }
+}
+
 /* Hero */
 .hero {
   background: var(--blue);
@@ -142,6 +161,22 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .btn-accent:hover {

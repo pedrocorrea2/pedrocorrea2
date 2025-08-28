@@ -7,27 +7,34 @@ const termButtons = document.querySelectorAll('.term-buttons button');
 const sumAmount = document.getElementById('sumAmount');
 const sumFinanced = document.getElementById('sumFinanced');
 const sumDiscount = document.getElementById('sumDiscount');
+const sumFee = document.getElementById('sumFee');
 const sumNet = document.getElementById('sumNet');
 
 let days = 30;
+const fee = 50000;
 
 const format = (n) =>
   n.toLocaleString('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 });
 
+const formatNumber = (v) => v.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+const parseNumber = (v) => parseInt(v.replace(/\./g, ''), 10) || 0;
+
 function calculate() {
-  const amount = parseFloat(amountInput.value) || 0;
+  const amount = parseNumber(amountInput.value);
   const rate = parseFloat(rateInput.value) || 0;
   const discount = amount * (rate / 100) * (days / 30);
-  const net = amount - discount;
+  const net = amount - discount - fee;
   sumAmount.textContent = format(amount);
   sumFinanced.textContent = format(amount);
   sumDiscount.textContent = format(discount);
+  sumFee.textContent = format(fee);
   sumNet.textContent = format(net);
+  rateValue.textContent = `${rate.toFixed(1)}%`;
 }
 
 presetButtons.forEach((btn) =>
   btn.addEventListener('click', () => {
-    amountInput.value = btn.dataset.value;
+    amountInput.value = formatNumber(btn.dataset.value);
     calculate();
   })
 );
@@ -41,7 +48,11 @@ termButtons.forEach((btn) =>
   })
 );
 
-amountInput.addEventListener('input', calculate);
+amountInput.addEventListener('input', (e) => {
+  const raw = e.target.value.replace(/\D/g, '');
+  e.target.value = raw ? formatNumber(raw) : '';
+  calculate();
+});
 rateInput.addEventListener('input', () => {
   rateValue.textContent = `${parseFloat(rateInput.value).toFixed(1)}%`;
   calculate();
@@ -83,6 +94,21 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
 document.getElementById('btnFirmaDocs').addEventListener('click', () => {
   alert('Firma de documentos próximamente disponible.');
+});
+
+const loginUser = document.getElementById('loginUser');
+loginUser.addEventListener('input', (e) => {
+  let v = e.target.value.replace(/[^0-9kK]/g, '').toUpperCase();
+  if (v.length > 1) {
+    const body = v.slice(0, -1).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    const dv = v.slice(-1);
+    v = `${body}-${dv}`;
+  }
+  e.target.value = v;
+});
+
+document.getElementById('btnRegister').addEventListener('click', () => {
+  alert('Registro próximamente disponible.');
 });
 
 // Gallery slideshow

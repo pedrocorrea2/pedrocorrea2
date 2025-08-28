@@ -37,6 +37,23 @@ button {
   border-radius: 4px;
   font-weight: 600;
 }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-light);
+  border: 1px solid var(--color-light);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.btn-accent,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
 header {
   background: var(--color-primary);
   color: var(--color-light);
@@ -61,6 +78,25 @@ header {
 }
 .nav-bar .login-dropdown {
   margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-bar .links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .nav-bar .links a,
+  .nav-bar .links button {
+    margin: 0.5rem 0 0;
+  }
+  .nav-bar .links .login-dropdown {
+    margin-left: 0;
+  }
 }
 .hero {
   background: var(--color-light);

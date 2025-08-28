@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [rut, setRut] = useState('');
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -19,11 +20,20 @@ export default function Navbar() {
     e.preventDefault();
     alert('Acceso de clientes próximamente disponible.');
     e.currentTarget.reset();
+    setRut('');
     setOpen(false);
   };
 
   const handleFirma = () => {
     console.log('Firma Documentos');
+  };
+
+  const formatRut = (value) => {
+    const clean = value.replace(/[^0-9kK]/g, '').toUpperCase();
+    if (clean.length <= 1) return clean;
+    const body = clean.slice(0, -1).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    const dv = clean.slice(-1);
+    return `${body}-${dv}`;
   };
 
   return (
@@ -37,13 +47,14 @@ export default function Navbar() {
           <Link href="#como-funciona">Cómo funciona</Link>
           <Link href="#oficinas">Oficinas</Link>
           <Link href="#contacto">Contacto</Link>
+          <button className="btn-secondary" onClick={() => alert('Registro próximamente disponible.')}>Registrarse</button>
           <div className="login-dropdown" ref={menuRef}>
             <button
               id="loginToggle"
               className="btn-accent"
               onClick={() => setOpen(!open)}
             >
-              Acceso Clientes
+              Acceso clientes
             </button>
             {open && (
               <div className="dropdown-menu">
@@ -53,6 +64,8 @@ export default function Navbar() {
                     id="loginUser"
                     name="usuario"
                     placeholder="RUT"
+                    value={rut}
+                    onChange={(e) => setRut(formatRut(e.target.value))}
                     required
                   />
                   <input

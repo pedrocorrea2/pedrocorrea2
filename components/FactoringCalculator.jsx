@@ -2,17 +2,34 @@ import { useState } from 'react';
 
 export default function FactoringCalculator() {
   const [amount, setAmount] = useState(1000000);
+  const [amountInput, setAmountInput] = useState('1.000.000');
   const [days, setDays] = useState(30);
-  const [rate, setRate] = useState(1.0);
+  const [rate, setRate] = useState(0.9);
+
 
   const formatCurrency = (n) =>
     n.toLocaleString('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 });
 
+  const fee = 50000;
   const discount = amount * (rate / 100) * (days / 30);
-  const net = amount - discount;
+  const net = amount - discount - fee;
+
 
   const presets = [50000, 500000, 1000000, 5000000];
   const presetLabel = (v) => (v >= 1000000 ? `${v / 1000000}M` : `${v / 1000}K`);
+
+  const formatNumber = (val) => val.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+  const handleAmountChange = (e) => {
+    const raw = e.target.value.replace(/\D/g, '');
+    setAmount(raw ? parseInt(raw, 10) : 0);
+    setAmountInput(raw ? formatNumber(raw) : '');
+  };
+
+  const setPreset = (p) => {
+    setAmount(p);
+    setAmountInput(formatNumber(String(p)));
+  };
 
   return (
     <section className="calculator" id="simulador">
@@ -26,14 +43,15 @@ export default function FactoringCalculator() {
               <span className="currency">CLP $</span>
               <input
                 id="amount"
-                type="number"
-                value={amount}
-                onChange={(e) => setAmount(parseFloat(e.target.value) || 0)}
+                type="text"
+                inputMode="numeric"
+                value={amountInput}
+                onChange={handleAmountChange}
               />
             </div>
             <div className="preset-amounts">
               {presets.map((p) => (
-                <button type="button" key={p} onClick={() => setAmount(p)}>
+                <button type="button" key={p} onClick={() => setPreset(p)}>
                   {presetLabel(p)}
                 </button>
               ))}
@@ -73,6 +91,9 @@ export default function FactoringCalculator() {
             </p>
             <p>
               Comisión de factoring <span>{formatCurrency(discount)}</span>
+            </p>
+            <p>
+              Gastos de la operación <span>{formatCurrency(fee)}</span>
             </p>
             <p className="result">
               Hoy puedes cobrar <span>{formatCurrency(net)}</span>
