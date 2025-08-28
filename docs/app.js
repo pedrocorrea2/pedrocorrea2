@@ -85,6 +85,7 @@ document.getElementById('btnFirmaDocs').addEventListener('click', () => {
   alert('Firma de documentos próximamente disponible.');
 });
 
+// Gallery slideshow
 const gallerySlides = document.querySelectorAll('.gallery img');
 let currentSlide = 0;
 if (gallerySlides.length > 0) {
