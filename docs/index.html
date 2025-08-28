@@ -16,12 +16,13 @@
         <a href="#servicios">Servicios</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#simulador">Simulador</a>
+        <a href="#oficinas">Oficinas</a>
         <a href="#contacto">Contacto</a>
         <div class="login-dropdown">
           <button id="loginToggle" class="btn-accent"><i class="fa-solid fa-user"></i> Ingreso</button>
           <div id="loginMenu" class="dropdown-menu hidden">
             <form id="loginForm" class="login-form">
-              <label>Usuario
+              <label>RUT
                 <input type="text" id="loginUser" required />
               </label>
               <label>Contraseña
@@ -146,30 +147,63 @@
     </div>
   </section>
 
-  <section id="simulador" class="calculator">
+  <section class="calculator" id="simulador">
     <div class="container">
-      <h2>Simula tu factoring</h2>
-      <div class="calculator-card">
-        <form id="calcForm" class="calc-grid">
-          <label>Monto factura
-            <input type="number" id="invoiceAmount" required />
-          </label>
-          <label>Tasa anual (%)
-            <input type="number" id="rate" required />
-          </label>
-          <label>Plazo (días)
-            <input type="number" id="days" required />
-          </label>
-          <button type="submit" class="btn-primary">Calcular</button>
+      <p class="tagline">Cobra hoy tus facturas con factoring</p>
+      <h2>Simula tu primer financiamiento</h2>
+      <div class="calc-wrapper">
+        <form id="calcForm" class="calc-form">
+          <label for="invoiceAmount">Monto de la(s) factura(s) que quieres adelantar</label>
+          <div class="amount-input">
+            <span class="currency">CLP $</span>
+            <input type="number" id="invoiceAmount" value="1000000" />
+          </div>
+          <div class="preset-amounts">
+            <button type="button" data-value="50000">50K</button>
+            <button type="button" data-value="500000">500K</button>
+            <button type="button" data-value="1000000">1M</button>
+            <button type="button" data-value="5000000">5M</button>
+          </div>
+          <p>Plazo de pago de la factura</p>
+          <div class="term-buttons">
+            <button type="button" data-days="30" class="active">30 días</button>
+            <button type="button" data-days="60">60 días</button>
+            <button type="button" data-days="90">90 días</button>
+            <button type="button" data-days="120">120 días</button>
+            <button type="button" data-days="150">150 días</button>
+          </div>
+          <label for="rate">Tasa de interés mensual: <span id="rateValue">1.0%</span></label>
+          <input type="range" id="rate" min="0" max="5" step="0.1" value="1" />
         </form>
-        <div id="result" class="calc-output hidden">
-          <p>Descuento: <span id="discount"></span></p>
-          <p>Monto a recibir: <span id="net"></span></p>
+        <div class="calc-summary">
+          <p>Monto facturas por financiar <span id="sumAmount"></span></p>
+          <p>Monto financiado (100%) <span id="sumFinanced"></span></p>
+          <p>Comisión de factoring <span id="sumDiscount"></span></p>
+          <p class="result">Hoy puedes cobrar <span id="sumNet"></span></p>
+          <button class="btn-accent">Regístrate y aumenta tu liquidez</button>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="oficinas" class="offices">
+    <div class="container">
+      <h2>Nuestras Oficinas</h2>
+      <div class="offices-grid">
+        <div>
+          <p><strong>Antofagasta</strong><br />Arturo Prat 461 Of. 1802<br />55 2251 340</p>
+          <p><strong>Copiapó</strong><br />clezcano@acfcapital.cl<br />2 23389400</p>
+          <p><strong>Santiago, Casa Matriz</strong><br />Av. El Bosque Norte 0177 Of. 802<br />Las Condes<br />22338 9400</p>
+          <p><strong>Santiago, Providencia</strong><br />Av. Providencia 2653 Of. 1102<br />Providencia<br />22520 6000 - 22233 2469</p>
+        </div>
+        <div>
+          <p><strong>Viña del Mar</strong><br />Av. Nueva libertad 1405 Of.1306<br />32 2690 759</p>
+          <p><strong>Rancagua</strong><br />eguajardo@acfcapital.cl<br />2 23389400</p>
+          <p><strong>Puerto Montt</strong><br />Benavente 550 Of. 503<br />65 2348 910</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="contacto" class="contact">
     <div class="container">
@@ -195,6 +229,16 @@
       <p>© 2025 ACF Capital</p>
     </div>
   </footer>
+
+  <a
+    href="https://api.whatsapp.com/send?phone=56985963134&text=Hola!%20Quiero%20hacer%20una%20consulta."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <script src="app.js"></script>
 </body>

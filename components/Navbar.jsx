@@ -35,6 +35,7 @@ export default function Navbar() {
         <div className="links">
           <Link href="#servicios">Servicios</Link>
           <Link href="#como-funciona">Cómo funciona</Link>
+          <Link href="#oficinas">Oficinas</Link>
           <Link href="#contacto">Contacto</Link>
           <div className="login-dropdown" ref={menuRef}>
             <button
@@ -47,7 +48,7 @@ export default function Navbar() {
             {open && (
               <div className="dropdown-menu">
                 <form onSubmit={handleLogin} className="login-form">
-                  <label htmlFor="loginUser">Usuario</label>
+                  <label htmlFor="loginUser">RUT</label>
                   <input id="loginUser" name="usuario" required />
                   <label htmlFor="loginPass">Contraseña</label>
                   <input

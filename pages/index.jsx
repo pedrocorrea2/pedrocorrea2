@@ -6,6 +6,8 @@ import HowItWorks from '../components/HowItWorks';
 import FactoringCalculator from '../components/FactoringCalculator';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
+import Offices from '../components/Offices';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function Home() {
   return (
@@ -16,8 +18,10 @@ export default function Home() {
       <Stats />
       <HowItWorks />
       <FactoringCalculator />
+      <Offices />
       <ContactForm />
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }
