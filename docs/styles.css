@@ -18,6 +18,7 @@ body {
   color: var(--dark);
   background: #fff;
   line-height: 1.6;
+  padding-top: 80px;
 }
 
 .container {
@@ -37,6 +38,12 @@ body {
 .navbar {
   background: var(--blue);
   color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navbar .container {
   display: flex;
@@ -84,6 +91,8 @@ body {
 }
 
 /* Hero */
+/* Hero */
+
 .hero {
   background: var(--blue);
   color: #fff;
@@ -211,6 +220,11 @@ body {
 .stats {
   padding: 3rem 0;
   background: var(--light);
+}
+
+.stats h2 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .stats-grid {

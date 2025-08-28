@@ -5,7 +5,6 @@ export default function FactoringCalculator() {
   const [amountInput, setAmountInput] = useState('1.000.000');
   const [days, setDays] = useState(30);
   const [rate, setRate] = useState(0.9);
-  
   const formatCurrency = (n) =>
     n.toLocaleString('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 });
 
