@@ -155,6 +155,7 @@ form input, form textarea {
   color: green;
   font-weight: 600;
 }
+  
 footer {
   background: var(--color-primary);
   color: var(--color-light);
