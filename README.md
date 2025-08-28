@@ -9,12 +9,16 @@ pedrocorrea2/pedrocorrea2 is a ✨ special ✨ repository because its `README.md
 You can click the Preview link to take a look at your changes.
 --->
 
+
+## Sitio estático de factoring
+
+Este repositorio contiene un prototipo de sitio web para ACF Capital construido con Next.js. Incluye componentes básicos como navegación, sección de héroe, servicios ofrecidos, pasos del proceso, formularios de contacto y "Trabaja con nosotros".
+
 ## Despliegue en GitHub Pages
 
-Este proyecto está configurado para generar una versión estática en la carpeta `docs`, la cual puede utilizarse como origen para GitHub Pages.
+El sitio se publica automáticamente usando **GitHub Actions**. Cada vez que se hace push a `main`:
 
-1. Ejecuta `npm run deploy` para construir la versión estática.
-2. Haz commit de la carpeta `docs` generada y sube los cambios a `main`.
-3. En la configuración del repositorio (Settings → Pages), selecciona la rama `main` y la carpeta `/docs` como fuente.
+1. La acción en `.github/workflows/deploy.yml` ejecuta `npm run build` para exportar la app estática.
+2. El artefacto generado en `out/` se despliega en GitHub Pages sin necesidad de commitear archivos binarios.
 
-Con esto el sitio quedará disponible en `https://<usuario>.github.io/pedrocorrea2/`.
+Una vez activada la opción Pages en la configuración del repositorio, la página estará disponible en `https://<usuario>.github.io/pedrocorrea2/`.

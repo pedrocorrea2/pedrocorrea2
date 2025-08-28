@@ -9,7 +9,6 @@
     "start": "next start",
     "test": "echo \"No tests\"",
     "deploy": "next build && rm -rf docs && mv out docs && touch docs/.nojekyll"
-
   },
   "keywords": [],
   "author": "",

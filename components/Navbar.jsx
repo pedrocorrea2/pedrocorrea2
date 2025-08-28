@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Navbar() {
   const handlePortal = () => {
@@ -14,7 +13,7 @@ export default function Navbar() {
     <header>
       <nav className="container">
         <Link href="/">
-          <Image src="/logo_acf.svg" alt="ACF Capital" width={160} height={48} />
+          <img src="/logo_acf.svg" alt="ACF Capital" width={160} height={48} />
         </Link>
         <div className="links">
           <Link href="#servicios">Servicios</Link>
