@@ -12,8 +12,21 @@ export default function Navbar() {
         setOpen(false);
       }
     };
+    const onScroll = () => {
+      const headerEl = document.querySelector('.site-header');
+      if (!headerEl) return;
+      if (window.scrollY > 50) {
+        headerEl.classList.add('scrolled');
+      } else {
+        headerEl.classList.remove('scrolled');
+      }
+    };
     document.addEventListener('click', handler);
-    return () => document.removeEventListener('click', handler);
+    window.addEventListener('scroll', onScroll);
+    return () => {
+      document.removeEventListener('click', handler);
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
   const handleLogin = (e) => {
@@ -65,7 +78,7 @@ export default function Navbar() {
             {open && (
               <div className="dropdown-menu">
                 <form onSubmit={handleLogin} className="login-form">
-                  <h3>Bienvenido a Office Banking</h3>
+                  <h3>Bienvenido a ACF Capital</h3>
 
                   <input
                     id="loginUser"
@@ -97,25 +110,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      {open && (
-        <div className="login-modal" role="dialog" aria-modal="true">
-          <div className="login-box">
-            <button className="close" onClick={handleClose} aria-label="Cerrar">
-              &times;
-            </button>
-            <h2>Acceso Clientes</h2>
-            <form onSubmit={handleLogin} className="login-form">
-              <label htmlFor="loginUser">Usuario</label>
-              <input id="loginUser" name="usuario" required />
-              <label htmlFor="loginPass">Contraseña</label>
-              <input id="loginPass" name="password" type="password" required />
-              <button type="submit" className="btn-primary">
-                Ingresar
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
