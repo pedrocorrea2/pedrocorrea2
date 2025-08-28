@@ -44,3 +44,13 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 document.getElementById('btnFirmaDocs').addEventListener('click', () => {
   alert('Firma de documentos próximamente disponible.');
 });
+
+const gallerySlides = document.querySelectorAll('.gallery img');
+let currentSlide = 0;
+if (gallerySlides.length > 0) {
+  setInterval(() => {
+    gallerySlides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % gallerySlides.length;
+    gallerySlides[currentSlide].classList.add('active');
+  }, 5000);
+}
