@@ -1,7 +1,7 @@
 /* Estilos generales */
 :root {
-  --blue: #0a2a66;
-  --gold: #ffcc00;
+  --blue: #283c67;
+  --gold: #e9b72d;
   --light: #f5f6fa;
   --dark: #222;
   --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -37,14 +37,21 @@ body {
   justify-content: space-between;
   padding: 1rem 0;
 }
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
 .navbar nav a {
-  color: #fff;
   margin-left: 1.5rem;
   text-decoration: none;
   font-weight: 500;
+  color: #fff;
 }
 .navbar nav a:hover {
   text-decoration: underline;
+}
+.navbar nav button {
+  margin-left: 1.5rem;
 }
 .logo {
   height: 48px;
@@ -76,7 +83,19 @@ body {
   display: inline-block;
 }
 .btn-primary:hover {
-  background: #e6b800;
+  background: #d1a121;
+}
+
+.btn-accent {
+  background: var(--gold);
+  color: var(--blue);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.btn-accent:hover {
+  background: #d1a121;
 }
 
 /* Services */
@@ -101,6 +120,28 @@ body {
 }
 .card h3 {
   margin-bottom: 0.5rem;
+}
+
+/* How it works */
+.how-it-works {
+  padding: 3rem 0;
+  background: var(--light);
+}
+.how-it-works h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.how-grid div {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 /* Simulator */

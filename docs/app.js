@@ -19,3 +19,9 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   alert('Gracias por tu mensaje. Nos pondremos en contacto pronto.');
   this.reset();
 });
+
+document.getElementById('jobForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Gracias por tu interés. Revisaremos tu información.');
+  this.reset();
+});

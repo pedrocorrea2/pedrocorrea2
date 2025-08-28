@@ -12,8 +12,11 @@
       <img src="logo_acf.svg" alt="ACF Capital" class="logo" />
       <nav>
         <a href="#servicios">Servicios</a>
+        <a href="#como-funciona">Cómo funciona</a>
         <a href="#simulador">Simulador</a>
         <a href="#contacto">Contacto</a>
+        <button class="btn-accent">Acceso Clientes</button>
+        <button class="btn-accent">Firma Documentos</button>
       </nav>
     </div>
   </header>
@@ -46,6 +49,26 @@
     </div>
   </section>
 
+  <section id="como-funciona" class="how-it-works">
+    <div class="container">
+      <h2>¿Cómo funciona?</h2>
+      <div class="how-grid">
+        <div>
+          <h3>1. Sube tu factura</h3>
+          <p>Envíanos la documentación mediante nuestro portal.</p>
+        </div>
+        <div>
+          <h3>2. Evaluamos y aprobamos</h3>
+          <p>Recibes respuesta en menos de 24 horas.</p>
+        </div>
+        <div>
+          <h3>3. Recibe tu dinero</h3>
+          <p>Transferimos los fondos a tu cuenta bancaria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="simulador" class="simulator">
     <div class="container">
       <h2>Simula tu factoring</h2>
@@ -65,6 +88,24 @@
         <p>Descuento: <span id="discount"></span></p>
         <p>Monto a recibir: <span id="net"></span></p>
       </div>
+    </div>
+  </section>
+
+  <section id="trabaja" class="contact">
+    <div class="container">
+      <h2>Trabaja con nosotros</h2>
+      <form id="jobForm" class="contact-form">
+        <label>Nombre
+          <input type="text" id="jobName" required />
+        </label>
+        <label>Correo
+          <input type="email" id="jobEmail" required />
+        </label>
+        <label>Mensaje
+          <textarea id="jobMessage" rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn-primary">Enviar</button>
+      </form>
     </div>
   </section>
 
