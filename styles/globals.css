@@ -63,6 +63,7 @@ button {
 .btn-nav {
   width: 180px;
   white-space: nowrap;
+
 }
 header {
   background: var(--color-primary);
@@ -386,6 +387,7 @@ footer {
   width: 260px;
   z-index: 20;
   color: var(--color-dark);
+
 }
 .dropdown-menu .btn-link {
   background: none;

@@ -71,6 +71,7 @@ if (contactForm) {
   });
 }
 
+
 // Login modal
 const loginToggle = document.getElementById('loginToggle');
 const loginModal = document.getElementById('loginModal');
@@ -86,6 +87,7 @@ loginClose.addEventListener('click', () => {
 
 loginModal.addEventListener('click', (e) => {
   if (e.target === loginModal) loginModal.classList.add('hidden');
+
 });
 
 document.getElementById('loginForm').addEventListener('submit', function (e) {
@@ -96,6 +98,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 });
 
 document.getElementById('btnFirmaDocsTop').addEventListener('click', () => {
+
   alert('Firma de documentos próximamente disponible.');
 });
 
@@ -109,6 +112,7 @@ loginUser.addEventListener('input', (e) => {
   }
   e.target.value = v;
 });
+
 
 // Gallery slideshow
 const gallerySlides = document.querySelectorAll('.gallery img');
