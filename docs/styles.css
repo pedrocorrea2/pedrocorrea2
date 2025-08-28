@@ -61,6 +61,7 @@ body {
   font-weight: 500;
   color: #fff;
   cursor: pointer;
+
 }
 .navbar nav a:hover {
   text-decoration: underline;
@@ -194,6 +195,7 @@ body {
 .btn-nav {
   width: 180px;
   white-space: nowrap;
+
 }
 
 .btn-accent:hover {
@@ -229,6 +231,7 @@ body {
   padding: 3rem 0;
   background: var(--light);
 }
+
 .stats h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -258,6 +261,7 @@ body {
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
+
 
 /* How it works */
 .how-it-works {
@@ -385,6 +389,7 @@ body {
   width: 260px;
   z-index: 20;
   color: var(--dark);
+
 }
 .dropdown-menu .btn-link {
   background: none;

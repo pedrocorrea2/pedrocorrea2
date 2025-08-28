@@ -108,8 +108,10 @@ loginUser.addEventListener('input', (e) => {
   e.target.value = v;
 });
 
+
 document.getElementById('btnFirmaDocsTop').addEventListener('click', () => {
   alert('Firma de documentos próximamente disponible.');
+
 });
 
 // Gallery slideshow
