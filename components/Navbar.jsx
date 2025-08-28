@@ -48,24 +48,26 @@ export default function Navbar() {
             {open && (
               <div className="dropdown-menu">
                 <form onSubmit={handleLogin} className="login-form">
-                  <label htmlFor="loginUser">RUT</label>
+                  <h3>Bienvenido a Acf Capital</h3>
                   <input
                     id="loginUser"
                     name="usuario"
                     placeholder="RUT"
                     required
                   />
-                  <label htmlFor="loginPass">Clave</label>
                   <input
                     id="loginPass"
                     name="password"
                     type="password"
-                    placeholder="Clave"
+                    placeholder="Contraseña"
                     required
                   />
-                  <button type="submit" className="btn-primary">
-                    Ingresar
+                  <button type="submit" className="btn-login">
+                    Aceptar
                   </button>
+                  <a href="#" className="forgot-link">
+                    ¿Olvidaste tu clave?
+                  </a>
                 </form>
                 <button id="btnFirmaDocs" className="btn-link" onClick={handleFirma}>
                   Firma Documentos

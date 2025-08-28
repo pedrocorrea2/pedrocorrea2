@@ -348,16 +348,33 @@ body {
   display: grid;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
-.login-form label {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
+.login-form h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 .login-form input {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+.btn-login {
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.forgot-link {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--blue);
+  text-decoration: underline;
 }
 
 /* Contact */
@@ -415,13 +432,13 @@ body {
   right: 20px;
   background: #25D366;
   color: #fff;
-  width: 56px;
-  height: 56px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   z-index: 100;
 }
