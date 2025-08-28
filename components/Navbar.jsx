@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function Navbar() {
-  const handlePortal = () => {
-    console.log('Acceso Clientes');
-  };
+  const [open, setOpen] = useState(false);
+  const handlePortal = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const handleFirma = () => {
     console.log('Firma Documentos');
+  };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    alert('Acceso de clientes próximamente disponible.');
+    e.currentTarget.reset();
+    handleClose();
   };
   return (
     <header className="site-header">
@@ -25,6 +32,25 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+      {open && (
+        <div className="login-modal" role="dialog" aria-modal="true">
+          <div className="login-box">
+            <button className="close" onClick={handleClose} aria-label="Cerrar">
+              &times;
+            </button>
+            <h2>Acceso Clientes</h2>
+            <form onSubmit={handleLogin} className="login-form">
+              <label htmlFor="loginUser">Usuario</label>
+              <input id="loginUser" name="usuario" required />
+              <label htmlFor="loginPass">Contraseña</label>
+              <input id="loginPass" name="password" type="password" required />
+              <button type="submit" className="btn-primary">
+                Ingresar
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
