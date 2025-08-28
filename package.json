@@ -1,0 +1,22 @@
+{
+  "name": "pedrocorrea2",
+  "version": "1.0.0",
+  "description": "- 👋 Hi, I’m @pedrocorrea2 <!--- - 👀 I’m interested in Automation and Artificial Intelligence - 🌱 I’m currently learning Google App Script - 💞️ I’m looking to collaborate on ... - 📫 How to reach me ... ---> <!--- pedrocorrea2/pedrocorrea2 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile. You can click the Preview link to take a look at your changes. --->",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"No tests\"",
+    "deploy": "next build && rm -rf docs && mv out docs && touch docs/.nojekyll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "next": "^15.5.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}
