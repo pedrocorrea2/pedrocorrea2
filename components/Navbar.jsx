@@ -49,12 +49,18 @@ export default function Navbar() {
               <div className="dropdown-menu">
                 <form onSubmit={handleLogin} className="login-form">
                   <label htmlFor="loginUser">RUT</label>
-                  <input id="loginUser" name="usuario" required />
-                  <label htmlFor="loginPass">Contraseña</label>
+                  <input
+                    id="loginUser"
+                    name="usuario"
+                    placeholder="RUT"
+                    required
+                  />
+                  <label htmlFor="loginPass">Clave</label>
                   <input
                     id="loginPass"
                     name="password"
                     type="password"
+                    placeholder="Clave"
                     required
                   />
                   <button type="submit" className="btn-primary">
