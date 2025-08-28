@@ -2,17 +2,22 @@ import { useState } from 'react';
 
 export default function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
     const data = Object.fromEntries(new FormData(e.currentTarget));
-    console.log('Nuevo cliente:', data); // TODO: conectar con backend
-    // Simulación de espera
-    setTimeout(() => {
-      setSubmitting(false);
+    try {
+      console.log('Nuevo cliente:', data); // TODO: conectar con backend
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      setSent(true);
       e.currentTarget.reset();
-    }, 500);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -36,12 +41,18 @@ export default function ContactForm() {
           <h2>Contáctanos</h2>
           <p>Déjanos tus datos y te responderemos a la brevedad.</p>
         </div>
-        <form id="formNuevoCliente" onSubmit={handleSubmit}>
+        <form id="formNuevoCliente" onSubmit={handleSubmit} className="contact-card">
           <label htmlFor="nombre">Nombre</label>
           <input id="nombre" name="nombre" required />
 
           <label htmlFor="correo">Correo</label>
           <input id="correo" name="correo" type="email" required />
+
+          <label htmlFor="telefono">Teléfono</label>
+          <input id="telefono" name="telefono" type="tel" required />
+
+          <label htmlFor="rut">RUT</label>
+          <input id="rut" name="rut" required />
 
           <label htmlFor="empresa">Razón social</label>
           <input id="empresa" name="empresa" required />
@@ -52,6 +63,11 @@ export default function ContactForm() {
           <button type="submit" className="btn-primary" disabled={submitting}>
             {submitting ? 'Enviando...' : 'Enviar'}
           </button>
+          {sent && (
+            <p className="form-success" aria-live="polite">
+              Gracias, te contactaremos pronto.
+            </p>
+          )}
         </form>
       </div>
     </section>
