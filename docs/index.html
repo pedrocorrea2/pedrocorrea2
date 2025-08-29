@@ -32,22 +32,27 @@
         <!-- Logo: mantener sin lazy por ser visible en el primer pantallazo -->
         <img src="./logo_acf.svg" alt="ACF Capital" class="logo"
         width="120" height="48">
-        <nav class="nav-main" role="navigation" aria-label=
-        "Navegación principal">
-          <a href="#nosotros">Nosotros</a> <a href=
-          "#servicios">Servicios</a> <a href="#proceso">Proceso</a>
-          <a href="#simulador">Simulador</a> <a href=
-          "#oficinas">Oficinas</a> <a href="#contacto">Contacto</a>
+        <nav class="nav-main" role="navigation" aria-label="Navegación principal">
+          <a href="#nosotros">Nosotros</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#simulador">Simulador</a>
+          <a href="#oficinas">Oficinas</a>
+          <a href="#contacto">Contacto</a>
         </nav>
         <div class="nav-actions">
-          <button class="btn btn-secondary" id="btnFirmaDocsTop"
-          aria-label="Acceder a firma de documentos">Firmar
-          docs</button> <button class="btn btn-primary" id=
-          "loginToggle" aria-label="Acceso para clientes"> Acceso
-          clientes</button>
-        </div><button class="mobile-toggle" id="mobileToggle"
-        aria-label="Abrir menú de navegación" aria-expanded=
-        "false"></button>
+          <button class="btn btn-secondary" id="btnFirmaDocsTop" aria-label="Acceder a firma de documentos">
+            <i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+            Firmar docs
+          </button>
+          <button class="btn btn-primary" id="loginToggle" aria-label="Acceso para clientes">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            Acceso clientes
+          </button>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
       </div>
       <nav class="mobile-nav" id="mobileNav" role="navigation"
       aria-label="Navegación móvil">
@@ -70,9 +75,14 @@
             100% digital, respuesta en 24 horas y las mejores tasas
             del mercado.</p>
             <div class="hero-cta">
-              <a href="#simulador" class="btn btn-primary">Simular
-              ahora</a> <button class="btn btn-ghost" id=
-              "btnConoceNos"> Conoce cómo funciona</button>
+              <a href="#simulador" class="btn btn-primary">
+                <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+                Simular ahora
+              </a>
+              <button class="btn btn-ghost" id="btnConoceNos">
+                <i class="fa-solid fa-play" aria-hidden="true"></i>
+                Conoce cómo funciona
+              </button>
             </div>
           </div>
           <div class="hero-image" aria-hidden="true">
@@ -150,28 +160,36 @@
         empresa</p>
         <div class="services-grid">
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-coins"></i>
+            </div>
             <h3>Anticipo de fondos</h3>
             <p>Compramos tus cuentas por cobrar y te entregamos
             efectivo inmediatamente. Sin esperas, sin
             complicaciones.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
             <h3>Gestión de cobranza</h3>
             <p>Nuestro equipo especializado gestiona el cobro de
             tus documentos con la más alta tecnología y
             profesionalismo.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
             <h3>Plataforma digital</h3>
             <p>Accede en tiempo real al estado de todas tus
             operaciones a través de nuestra plataforma web
             intuitiva.</p>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-eye-slash"></i>
+            </div>
             <h3>Factoring confidencial</h3>
             <p>Obtén liquidez sin que tus clientes se enteren,
             manteniendo intacta la relación comercial.</p>
@@ -187,28 +205,28 @@
         solo 3 pasos</p>
         <div class="process-grid">
           <article class="process-step">
-            <div class="step-number">
-              1
+            <div class="step-number">1</div>
+            <div class="step-icon" aria-hidden="true">
+              <i class="fa-solid fa-upload"></i>
             </div>
-            <div class="step-icon" aria-hidden="true"></div>
             <h3>Envía tu documentación</h3>
             <p>Sube tus facturas y documentos a través de nuestra
             plataforma segura. El proceso es 100% digital.</p>
           </article>
           <article class="process-step">
-            <div class="step-number">
-              2
+            <div class="step-number">2</div>
+            <div class="step-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
             </div>
-            <div class="step-icon" aria-hidden="true"></div>
             <h3>Evaluamos tu solicitud</h3>
             <p>Nuestro equipo analiza tu documentación y te da una
             respuesta en menos de 24 horas hábiles.</p>
           </article>
           <article class="process-step">
-            <div class="step-number">
-              3
+            <div class="step-number">3</div>
+            <div class="step-icon" aria-hidden="true">
+              <i class="fa-solid fa-money-bill-transfer"></i>
             </div>
-            <div class="step-icon" aria-hidden="true"></div>
             <h3>Recibe tu dinero</h3>
             <p>Una vez aprobado, transferimos los fondos
             directamente a tu cuenta bancaria de forma segura.</p>
@@ -319,9 +337,11 @@
               <div class="result-value" id="sumNet">
                 $0
               </div>
-            </div><a href="#contacto" class="btn btn-primary"
-            style="width: 100%; margin-top: 1rem;"> Solicitar
-            financiamiento</a>
+            </div>
+            <a href="#contacto" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              Solicitar financiamiento
+            </a>
             <p style=
             "margin-top: .75rem; font-size:.85rem; opacity:.9">*
             Cálculo referencial. Tasas, comisiones y gastos sujetos
@@ -342,6 +362,7 @@
               Las Condes, Santiago
             </address>
             <div class="office-contact">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
               <a href="tel:+56223389400">+56 2 2338 9400</a>
             </div>
           </article>
@@ -352,6 +373,7 @@
               Providencia, Santiago
             </address>
             <div class="office-contact">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
               <a href="tel:+56225206000">+56 2 2520 6000</a>
             </div>
           </article>
@@ -362,6 +384,7 @@
               Antofagasta
             </address>
             <div class="office-contact">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
               <a href="tel:+56552251340">+56 55 2251 340</a>
             </div>
           </article>
@@ -372,6 +395,7 @@
               Viña del Mar
             </address>
             <div class="office-contact">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
               <a href="tel:+56322690759">+56 32 2690 759</a>
             </div>
           </article>
@@ -382,6 +406,7 @@
               Puerto Montt
             </address>
             <div class="office-contact">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
               <a href="tel:+56652348910">+56 65 2348 910</a>
             </div>
           </article>
@@ -391,8 +416,8 @@
               Consultas regionales
             </address>
             <div class="office-contact">
-              <a href=
-              "mailto:clezcano@acfcapital.cl">clezcano@acfcapital.cl</a>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:clezcano@acfcapital.cl">clezcano@acfcapital.cl</a>
             </div>
           </article><!-- NUEVA: Rancagua -->
           <article class="office-card">
@@ -401,10 +426,11 @@
               Consultas regionales
             </address>
             <div class="office-contact">
-              <a href=
-              "mailto:eguajardo@acfcapital.cl">eguajardo@acfcapital.cl</a>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:eguajardo@acfcapital.cl">eguajardo@acfcapital.cl</a>
             </div>
             <div class="office-contact" style="margin-top:.5rem">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
               <a href="tel:+56223389400">+56 2 2338 9400</a>
             </div>
           </article>
@@ -444,8 +470,11 @@
             "form-input form-textarea" rows="4" placeholder=
             "Cuéntanos sobre tu empresa y necesidades de financiamiento...">
             </textarea>
-          </div><button type="submit" class="btn btn-primary"
-          style="width: 100%;"> Enviar mensaje</button>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Enviar mensaje
+          </button>
         </form>
       </div>
     </section>
@@ -508,15 +537,17 @@
       </div>
     </div>
   </footer><!-- WhatsApp Button -->
-   <a href=
-  "https://api.whatsapp.com/send?phone=56985963134&amp;text=Hola!%20Quiero%20hacer%20una%20consulta%20sobre%20factoring."
-  class="whatsapp-btn" target="_blank" rel="noopener noreferrer"
-  aria-label="Contactar por WhatsApp"></a> <!-- Login Modal -->
+  <a href="https://api.whatsapp.com/send?phone=56985963134&amp;text=Hola!%20Quiero%20hacer%20una%20consulta%20sobre%20factoring."
+  class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <!-- Login Modal -->
   <div id="loginModal" class="modal hidden" role="dialog"
   aria-labelledby="login-title" aria-modal="true">
     <div class="modal-content">
-      <button id="loginClose" class="modal-close" aria-label=
-      "Cerrar ventana de acceso"></button>
+      <button id="loginClose" class="modal-close" aria-label="Cerrar ventana de acceso">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
       <form id="loginForm" class="login-form" aria-label=
       "Formulario de acceso clientes" novalidate="" name=
       "loginForm">
@@ -534,10 +565,12 @@
           "input-label">Contraseña</label> <input type="password"
           id="loginPass" class="form-input" required=""
           aria-required="true" autocomplete="current-password">
-        </div><button type="submit" class="btn btn-primary" style=
-        "width: 100%;"> Ingresar</button> <a href=
-        "/recuperar-clave" class="forgot-link">¿Olvidaste tu
-        contraseña?</a>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <i class="fa-solid fa-sign-in-alt" aria-hidden="true"></i>
+          Ingresar
+        </button>
+        <a href="/recuperar-clave" class="forgot-link">¿Olvidaste tu contraseña?</a>
       </form>
     </div>
   </div><!-- JSON-LD: Organización y sucursales -->
