@@ -21,8 +21,8 @@ button {
   cursor: pointer;
 }
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 0 1rem;
 }
 .btn-primary {
@@ -44,12 +44,11 @@ button {
 
 .btn-secondary {
   background: transparent;
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  color: var(--color-light);
+  border: 1px solid var(--color-light);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-weight: 600;
-  margin-left: 1rem;
 }
 
 .btn-accent,
@@ -67,8 +66,8 @@ button {
 
 }
 header {
-  background: var(--color-light);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-light);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -84,15 +83,12 @@ header.nav-hidden {
 .nav-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 1rem 0;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 .nav-bar .links a {
-  margin-left: 1rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-light);
   cursor: pointer;
   position: relative;
 }
@@ -113,10 +109,8 @@ header.nav-hidden {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
-}
-.nav-bar .login-dropdown {
-  margin-left: 1rem;
+  gap: 1.5rem;
+  margin-left: auto;
 }
 
 @media (max-width: 768px) {
@@ -128,13 +122,11 @@ header.nav-hidden {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    margin-left: 0;
   }
   .nav-bar .links a,
   .nav-bar .links button {
     margin: 0.5rem 0 0;
-  }
-  .nav-bar .links .login-dropdown {
-    margin-left: 0;
   }
 }
 .hero {
