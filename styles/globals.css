@@ -32,6 +32,16 @@ button {
   border: none;
   border-radius: 4px;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover {
+  background: #1d2b4d;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 .btn-accent {
   background: var(--color-accent);
@@ -40,6 +50,16 @@ button {
   border: none;
   border-radius: 4px;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-accent:hover {
+  background: #d1a121;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 .btn-secondary {
@@ -50,21 +70,38 @@ button {
   border-radius: 4px;
   font-weight: 600;
   margin-left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-light);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 .btn-accent,
 .btn-secondary {
-  display: inline-flex;
-  align-items: center;
   gap: 0.25rem;
-  justify-content: center;
 }
 
 .btn-nav {
   width: auto;
   max-width: 180px;
   white-space: nowrap;
+}
 
+/* Navbar button overrides */
+header .btn-secondary.btn-nav {
+  color: var(--color-light);
+  border-color: var(--color-light);
+}
+header .btn-secondary.btn-nav:hover {
+  background: var(--color-light);
+  color: var(--color-primary);
 }
 header {
   background: var(--color-light);
@@ -84,7 +121,7 @@ header.nav-hidden {
 .nav-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0.5rem 1rem;
   flex-wrap: wrap;
   gap: 1rem;
@@ -114,6 +151,7 @@ header.nav-hidden {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-left: auto;
 }
 .nav-bar .login-dropdown {
   margin-left: 1rem;
@@ -204,6 +242,10 @@ header.nav-hidden {
 .contact {
   padding: 3rem 1rem;
   text-align: center;
+}
+.contact .container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 .contact-header {
   text-align: center;

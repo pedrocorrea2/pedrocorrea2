@@ -36,8 +36,8 @@ body {
 
 /* Navbar */
 .navbar {
-  background: #fff;
-  color: var(--blue);
+  background-color: var(--blue);
+  color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -55,7 +55,7 @@ body {
 .navbar .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 1rem 0;
 }
 .navbar nav {
@@ -63,6 +63,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-left: auto;
 }
 .navbar nav a {
   margin-left: 1.5rem;
@@ -178,11 +179,18 @@ body {
   border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-primary:hover {
   background: #d1a121;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
+
 
 .btn-accent {
   background: var(--gold);
@@ -194,6 +202,9 @@ body {
   align-items: center;
   gap: 0.25rem;
   justify-content: center;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-secondary {
@@ -208,6 +219,9 @@ body {
   align-items: center;
   gap: 0.25rem;
   justify-content: center;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-nav {
@@ -216,8 +230,25 @@ body {
   white-space: nowrap;
 }
 
+.btn-secondary:hover {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
 .btn-accent:hover {
   background: #d1a121;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+/* Navbar button overrides */
+.navbar .btn-secondary.btn-nav {
+  color: #fff;
+  border-color: #fff;
+}
+.navbar .btn-secondary.btn-nav:hover {
+  background: #fff;
+  color: var(--blue);
 }
 
 /* Services */
@@ -499,6 +530,10 @@ body {
   padding: 3rem 0;
   background: #fff;
   text-align: center;
+}
+.contact .container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 .contact .address {
   text-align: center;
