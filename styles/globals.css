@@ -102,6 +102,9 @@ header .btn-secondary.btn-nav:hover {
   background: var(--color-light);
   color: var(--color-primary);
 }
+header .btn-accent.btn-nav {
+  color: var(--color-light);
+}
 header {
   background: var(--color-light);
   color: var(--color-primary);
@@ -122,7 +125,7 @@ header.nav-hidden {
   align-items: center;
   justify-content: flex-start;
   padding: 0.5rem 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1rem;
 }
 .nav-bar .links a {
@@ -147,7 +150,7 @@ header.nav-hidden {
 .nav-bar .links {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1rem;
   margin-left: 2rem;
 }
@@ -156,6 +159,7 @@ header.nav-hidden {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -284,7 +288,7 @@ form input, form textarea {
 }
   
 .site-footer {
-  background: linear-gradient(180deg, #0b0f16, #000);
+  background: var(--color-primary);
   color: var(--color-light);
   margin-top: 2rem;
   font-size: 0.9rem;

@@ -56,12 +56,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: nowrap;
   padding: 1rem 0;
 }
 .navbar nav {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1rem;
   margin-left: 2rem;
 }
@@ -90,6 +91,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: nowrap;
 }
 .nav-actions button {
   cursor: pointer;
@@ -259,6 +261,9 @@ body {
 .navbar .btn-secondary.btn-nav:hover {
   background: #fff;
   color: var(--blue);
+}
+.navbar .btn-accent.btn-nav {
+  color: #fff;
 }
 
 /* Services */
@@ -612,7 +617,7 @@ body {
 
 /* Footer */
 .site-footer {
-  background: linear-gradient(180deg, #0b0f16, #000);
+  background: var(--blue);
   color: #fff;
   margin-top: 2rem;
   font-size: 0.9rem;
