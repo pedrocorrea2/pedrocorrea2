@@ -63,11 +63,15 @@ export default function Navbar() {
         <Link href="/" className="logo" aria-label="Inicio">
           <img src="/logo_acf.svg" alt="ACF Capital" width={160} height={48} />
         </Link>
+
         <nav className="links" aria-label="Main navigation">
           <Link href="#servicios">Servicios</Link>
           <Link href="#como-funciona">Cómo funciona</Link>
+          <Link href="#simulador">Simulador</Link>
           <Link href="#oficinas">Oficinas</Link>
           <Link href="#contacto">Contacto</Link>
+        </div>
+        <div className="actions">
           <button
             className="btn-secondary btn-nav"
             onClick={handleFirma}
