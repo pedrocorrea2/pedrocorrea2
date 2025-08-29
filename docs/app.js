@@ -64,12 +64,20 @@ calculate();
 
 // Dynamic navbar
 if (navbar) {
+  let lastScroll = 0;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    const current = window.pageYOffset;
+    if (current > lastScroll && current > 50) {
+      navbar.classList.add('nav-hidden');
+    } else {
+      navbar.classList.remove('nav-hidden');
+    }
+    if (current > 50) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
+    lastScroll = current;
   });
 }
 

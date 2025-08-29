@@ -12,14 +12,22 @@ export default function Navbar() {
         setOpen(false);
       }
     };
+    let lastScroll = 0;
     const onScroll = () => {
       const headerEl = document.querySelector('.site-header');
       if (!headerEl) return;
-      if (window.scrollY > 50) {
+      const current = window.pageYOffset;
+      if (current > lastScroll && current > 50) {
+        headerEl.classList.add('nav-hidden');
+      } else {
+        headerEl.classList.remove('nav-hidden');
+      }
+      if (current > 50) {
         headerEl.classList.add('scrolled');
       } else {
         headerEl.classList.remove('scrolled');
       }
+      lastScroll = current;
     };
     document.addEventListener('click', handler);
     window.addEventListener('scroll', onScroll);
