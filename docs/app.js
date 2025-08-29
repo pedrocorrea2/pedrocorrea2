@@ -9,6 +9,7 @@ const sumFinanced = document.getElementById('sumFinanced');
 const sumDiscount = document.getElementById('sumDiscount');
 const sumFee = document.getElementById('sumFee');
 const sumNet = document.getElementById('sumNet');
+const navbar = document.querySelector('.navbar');
 
 let days = 30;
 
@@ -61,6 +62,25 @@ rateInput.addEventListener('input', () => {
 
 calculate();
 
+// Dynamic navbar
+if (navbar) {
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const current = window.pageYOffset;
+    if (current > lastScroll && current > 50) {
+      navbar.classList.add('nav-hidden');
+    } else {
+      navbar.classList.remove('nav-hidden');
+    }
+    if (current > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    lastScroll = current;
+  });
+}
+
 // Contact form
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
@@ -79,14 +99,19 @@ const loginClose = document.getElementById('loginClose');
 
 loginToggle.addEventListener('click', () => {
   loginModal.classList.remove('hidden');
+  loginModal.removeAttribute('hidden');
 });
 
 loginClose.addEventListener('click', () => {
   loginModal.classList.add('hidden');
+  loginModal.setAttribute('hidden', '');
 });
 
 loginModal.addEventListener('click', (e) => {
-  if (e.target === loginModal) loginModal.classList.add('hidden');
+  if (e.target === loginModal) {
+    loginModal.classList.add('hidden');
+    loginModal.setAttribute('hidden', '');
+  }
 
 });
 
@@ -95,6 +120,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   alert('Acceso de clientes próximamente disponible.');
   this.reset();
   loginModal.classList.add('hidden');
+  loginModal.setAttribute('hidden', '');
 });
 
 document.getElementById('btnFirmaDocsTop').addEventListener('click', () => {
