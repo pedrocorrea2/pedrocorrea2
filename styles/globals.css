@@ -21,8 +21,8 @@ button {
   cursor: pointer;
 }
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 0 1rem;
 }
 .btn-primary {
@@ -86,13 +86,6 @@ button {
 header .btn-secondary.btn-nav {
   color: var(--color-light);
   border-color: var(--color-light);
-}
-header .btn-secondary.btn-nav:hover {
-  background: var(--color-light);
-  color: var(--color-primary);
-}
-header .btn-accent.btn-nav {
-  color: var(--color-light);
 }
 header {
   background-color: var(--color-primary);
