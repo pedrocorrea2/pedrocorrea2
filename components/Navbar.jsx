@@ -59,12 +59,12 @@ export default function Navbar() {
 
   return (
     <header className="site-header">
-      <nav className="container nav-bar" aria-label="Main navigation">
+      <div className="container nav-bar">
         <Link href="/" className="logo" aria-label="Inicio">
           <img src="/logo_acf.svg" alt="ACF Capital" width={160} height={48} />
         </Link>
-        <div className="links">
-          <Link href="#nosotros">Nosotros</Link>
+
+        <nav className="links" aria-label="Main navigation">
           <Link href="#servicios">Servicios</Link>
           <Link href="#como-funciona">Cómo funciona</Link>
           <Link href="#simulador">Simulador</Link>
@@ -118,8 +118,8 @@ export default function Navbar() {
               </div>
             )}
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }
