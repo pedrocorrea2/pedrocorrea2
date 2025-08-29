@@ -69,7 +69,6 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-weight: 600;
-  margin-left: 1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +126,6 @@ header.nav-hidden {
   gap: 1rem;
 }
 .nav-bar .links a {
-  margin-left: 1rem;
   font-weight: 600;
   color: var(--color-primary);
   cursor: pointer;
@@ -151,10 +149,13 @@ header.nav-hidden {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-left: auto;
+  margin-left: 2rem;
 }
-.nav-bar .login-dropdown {
-  margin-left: 1rem;
+.nav-bar .actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -166,13 +167,17 @@ header.nav-hidden {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    margin-left: 0;
+  }
+  .nav-bar .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 0;
   }
   .nav-bar .links a,
-  .nav-bar .links button {
+  .nav-bar .actions button {
     margin: 0.5rem 0 0;
-  }
-  .nav-bar .links .login-dropdown {
-    margin-left: 0;
   }
 }
 .hero {

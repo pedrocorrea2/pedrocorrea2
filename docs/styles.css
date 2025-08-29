@@ -63,10 +63,9 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-left: auto;
+  margin-left: 2rem;
 }
 .navbar nav a {
-  margin-left: 1.5rem;
   text-decoration: none;
   font-weight: 500;
   color: var(--blue);
@@ -86,8 +85,13 @@ body {
 .navbar nav a:hover::after {
   width: 100%;
 }
-.navbar nav button {
-  margin-left: 1.5rem;
+.nav-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-actions button {
   cursor: pointer;
 }
 .logo {
@@ -103,9 +107,16 @@ body {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    margin-left: 0;
+  }
+  .nav-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 0;
   }
   .navbar nav a,
-  .navbar nav button {
+  .nav-actions button {
     margin: 0.5rem 0 0;
   }
 
@@ -214,7 +225,6 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-weight: 600;
-  margin-left: 1rem;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
