@@ -3,14 +3,14 @@
   --bg: #ffffff;
   --ink: #0B1320;
   --muted: #5B6473;
-  --primary: #0A2540;        /* Azul corp. */
-  --primary-600:#123B63;
-  --accent: #3B82F6;         /* CTA */
+  --primary: #283C67;        /* Azul ACF */
+  --primary-600:#1F2E5A;
+  --accent: #283C67;         /* CTA */
   --success:#16A34A; --error:#DC2626;
 
   /* Gradiente hero inspirado en fintech */
-  --hero-from:#0A2540;
-  --hero-to:#1E3A8A;
+  --hero-from:#283C67;
+  --hero-to:#1F2E5A;
 
   /* Neutrales */
   --n100:#F3F4F6; --n200:#E5E7EB; --n300:#CBD5E1; --n500:#6B7280; --n700:#334155;
@@ -37,6 +37,7 @@ p,li,label,input,button{font-size:16px;line-height:1.6;color:var(--muted)}
 .header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--n200);z-index:50}
 .header__in{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{font-weight:800;color:var(--primary);text-decoration:none}
+.logo img{display:block;height:40px}
 .nav{display:flex;gap:24px}
 .nav a{color:var(--n700);font-weight:600;text-decoration:none}
 .nav a:hover{color:var(--primary)}
