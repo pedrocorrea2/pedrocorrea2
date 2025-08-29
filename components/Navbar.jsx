@@ -59,11 +59,11 @@ export default function Navbar() {
 
   return (
     <header className="site-header">
-      <nav className="container nav-bar" aria-label="Main navigation">
+      <div className="container nav-bar">
         <Link href="/" className="logo" aria-label="Inicio">
           <img src="/logo_acf.svg" alt="ACF Capital" width={160} height={48} />
         </Link>
-        <div className="links">
+        <nav className="links" aria-label="Main navigation">
           <Link href="#servicios">Servicios</Link>
           <Link href="#como-funciona">Cómo funciona</Link>
           <Link href="#oficinas">Oficinas</Link>
@@ -78,7 +78,6 @@ export default function Navbar() {
             <button
               id="loginToggle"
               className="btn-accent btn-nav"
-
               onClick={() => setOpen(!open)}
             >
               Acceso clientes
@@ -87,7 +86,6 @@ export default function Navbar() {
               <div className="dropdown-menu">
                 <form onSubmit={handleLogin} className="login-form">
                   <h3>Bienvenido a ACF Capital</h3>
-
                   <input
                     id="loginUser"
                     name="usuario"
@@ -116,8 +114,8 @@ export default function Navbar() {
               </div>
             )}
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }
