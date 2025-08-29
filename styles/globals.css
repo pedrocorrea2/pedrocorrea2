@@ -104,8 +104,8 @@ header .btn-secondary.btn-nav:hover {
   color: var(--color-primary);
 }
 header {
-  background: var(--color-primary);
-  color: var(--color-light);
+  background: var(--color-light);
+  color: var(--color-primary);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -129,7 +129,7 @@ header.nav-hidden {
 .nav-bar .links a {
   margin-left: 1rem;
   font-weight: 600;
-  color: var(--color-light);
+  color: var(--color-primary);
   cursor: pointer;
   position: relative;
 }
