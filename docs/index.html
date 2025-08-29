@@ -16,25 +16,26 @@
   <header class="navbar">
     <div class="container">
       <img src="logo_acf.svg" alt="ACF Capital" class="logo" />
-      <nav>
+      <nav class="main-nav">
         <a href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#simulador">Simulador</a>
         <a href="#oficinas">Oficinas</a>
         <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="nav-actions">
         <button id="btnFirmaDocsTop" class="btn-secondary btn-nav">Firmar documentos</button>
         <button id="loginToggle" class="btn-accent btn-nav"><i class="fa-solid fa-user"></i> Acceso clientes</button>
-
-        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-  <div id="loginModal" class="modal hidden" role="dialog" aria-modal="true">
+  <div id="loginModal" class="modal hidden" hidden role="dialog" aria-modal="true">
     <div class="modal-content">
       <button id="loginClose" class="modal-close" aria-label="Cerrar">&times;</button>
       <form id="loginForm" class="login-form">
-        <h3>Acceso clientes</h3>
+        <h3>Bienvenido a ACF Capital</h3>
         <label for="loginUser">RUT</label>
         <input type="text" id="loginUser" required />
         <label for="loginPass">Contraseña</label>
@@ -172,7 +173,7 @@
           <p>Comisión de factoring <span id="sumDiscount"></span></p>
           <p>Gastos de la operación <span id="sumFee"></span></p>
           <p class="result">Hoy puedes cobrar <span id="sumNet"></span></p>
-          <button class="btn-accent">Regístrate y aumenta tu liquidez</button>
+          <a href="#contacto" class="btn-accent">Contáctanos</a>
         </div>
       </div>
     </div>
@@ -216,9 +217,50 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 ACF Capital</p>
+  <footer class="site-footer">
+    <div class="footer-top container">
+      <div class="footer-brand">
+        <img src="logo_acf.svg" alt="ACF Capital" class="footer-logo" />
+        <p>Financiamiento ágil y confiable para tu empresa.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Anticipo de fondos</a></li>
+            <li><a href="#servicios">Cobranza</a></li>
+            <li><a href="#servicios">Información en línea</a></li>
+            <li><a href="#servicios">Factoring sin notificación</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="#simulador">Calculadora</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column newsletter">
+          <h4>Newsletter</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Tu email" aria-label="Email" />
+            <button type="submit" class="btn-secondary">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 ACF Capital. Todos los derechos reservados.</p>
+        <nav class="footer-legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Compliance</a>
+          <a href="#">Mapa del sitio</a>
+        </nav>
+      </div>
     </div>
   </footer>
 
