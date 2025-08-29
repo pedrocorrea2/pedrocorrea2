@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function FactoringCalculator() {
   const [amount, setAmount] = useState(1000000);
@@ -96,7 +97,9 @@ export default function FactoringCalculator() {
             <p className="result">
               Hoy puedes cobrar <span>{formatCurrency(net)}</span>
             </p>
-            <button className="btn-accent">Regístrate y aumenta tu liquidez</button>
+            <Link href="#contacto" className="btn-accent">
+              Contáctanos
+            </Link>
           </div>
         </div>
       </div>
