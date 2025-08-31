@@ -9,7 +9,7 @@
   <!-- CSP endurecida con nonce (usa un valor aleatorio distinto por respuesta HTTP) -->
   <!-- Ejemplo de nonce fijo SOLO para demo: abc123. En producción genera y reemplaza dinámicamente -->
   <meta http-equiv="Content-Security-Policy" content=
-  "default-src 'self'; img-src 'self' https://www.acfcapital.cl data:; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'nonce-abc123'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+  "default-src 'self'; img-src 'self' https://www.acfcapital.cl data:; style-src 'self' 'nonce-abc123' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'nonce-abc123'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <title>ACF Capital - Factoring Empresarial | Liquidez
@@ -18,8 +18,10 @@
   "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
   rel="stylesheet">
   <!-- Sugerido: agregar SRI válido para el archivo exacto de Font Awesome que uses -->
-  <link rel="stylesheet" href=
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B"
+        crossorigin="anonymous">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>

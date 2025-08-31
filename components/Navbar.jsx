@@ -75,7 +75,7 @@ export default function Navbar() {
           <Link href="#simulador">Simulador</Link>
           <Link href="#oficinas">Oficinas</Link>
           <Link href="#contacto">Contacto</Link>
-        </div>
+        </nav>
         <div className="actions">
           <button
             className="btn-secondary btn-nav"
@@ -122,9 +122,9 @@ export default function Navbar() {
                 </button>
               </div>
             )}
+            </div>
           </div>
-        </nav>
-      </div>
+        </div>
     </header>
   );
 }
