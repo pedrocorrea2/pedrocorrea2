@@ -23,6 +23,7 @@ body { font-family: var(--font); color: var(--text); background: var(--lighter);
 .skip-link{position:absolute;top:-40px;left:6px;background:var(--primary);color:#fff;padding:8px;text-decoration:none;border-radius:4px;z-index:1001}
 .skip-link:focus{top:6px}
 
+
 .header{background:var(--primary);color:var(--lighter);backdrop-filter:blur(10px);border-bottom:none;position:fixed;top:0;left:0;right:0;z-index:1000;transition:var(--transition)}
 .header.scrolled{box-shadow:0 4px 20px var(--shadow)}
 .header.hidden{transform:translateY(-100%)}
@@ -34,6 +35,7 @@ body { font-family: var(--font); color: var(--text); background: var(--lighter);
 .nav-main a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--accent);transition:width .3s ease}
 .nav-main a:hover::after{width:100%}
 .nav-actions{display:flex;align-items:center;gap:1rem}
+
 
 .mobile-toggle{display:block;background:none;border:none;font-size:1.5rem;color:var(--lighter);cursor:pointer;padding:.5rem}
 .mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--lighter);border-top:1px solid var(--border);box-shadow:0 4px 20px var(--shadow);padding:1rem}
@@ -50,6 +52,7 @@ body { font-family: var(--font); color: var(--text); background: var(--lighter);
 .btn-secondary:hover{background:var(--primary);color:var(--lighter);transform:translateY(-2px)}
 .header .btn-secondary{color:var(--lighter);border-color:var(--lighter)}
 .header .btn-secondary:hover{background:var(--lighter);color:var(--primary)}
+
 .btn-ghost{background:transparent;color:var(--lighter);border:2px solid rgba(255,255,255,.3)}
 .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:var(--lighter)}
 
