@@ -3,11 +3,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-top container">
         <div className="footer-brand">
-          <img
-            src="https://www.acfcapital.cl/acfcapital/images/logo_acf.svg?crc=313753922"
-            alt="ACF Capital"
-            className="footer-logo"
-          />
+          <img src="https://www.acfcapital.cl/acfcapital/images/logo_acf.svg?crc=313753922" alt="ACF Capital" className="footer-logo" />
           <p>Financiamiento ágil y confiable para tu empresa.</p>
         </div>
         <div className="footer-links">

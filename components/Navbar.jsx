@@ -61,12 +61,7 @@ export default function Navbar() {
     <header className="site-header">
       <div className="container nav-bar">
         <Link href="/" className="logo" aria-label="Inicio">
-          <img
-            src="https://www.acfcapital.cl/acfcapital/images/logo_acf.svg?crc=313753922"
-            alt="ACF Capital"
-            width={226}
-            height={41}
-          />
+          <img src="https://www.acfcapital.cl/acfcapital/images/logo_acf.svg?crc=313753922" alt="ACF Capital" width={160} height={48} />
         </Link>
 
         <nav className="links" aria-label="Main navigation">
@@ -75,7 +70,7 @@ export default function Navbar() {
           <Link href="#simulador">Simulador</Link>
           <Link href="#oficinas">Oficinas</Link>
           <Link href="#contacto">Contacto</Link>
-        </nav>
+        </div>
         <div className="actions">
           <button
             className="btn-secondary btn-nav"
@@ -122,9 +117,9 @@ export default function Navbar() {
                 </button>
               </div>
             )}
-            </div>
           </div>
-        </div>
+        </nav>
+      </div>
     </header>
   );
 }
